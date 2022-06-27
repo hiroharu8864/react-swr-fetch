@@ -10,12 +10,13 @@ export const useAllUsersSWR = () => {
   /**
    * 第2引数　fetcher
    * Promise を返す関数であれば、何でもよい。
-   *
    */
 
-  const { data, error } = useSWR<Array<User>>(
+  const { data, error, isValidating } = useSWR<Array<User>>(
     "https://jsonplaceholder.typicode.com/users",
     fetcher
   );
+  console.log(data);
+  console.log(isValidating);
   return { data, error };
 };
