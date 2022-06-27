@@ -14,10 +14,11 @@ export const FetchCheck: FC = memo(() => {
   return (
     <>
       <div>
-        <p>Test Page</p>
-        {/* {data.map((user) => (
+        <p>Fetch Users is below</p>
+        <br />
+        {data.map((user) => (
           <div key={user.id}>{user.name}</div>
-        ))} */}
+        ))}
         <button onClick={onClickHome}>to home</button>
       </div>
     </>
