@@ -13,7 +13,5 @@ export const useAllUsersSWR = () => {
     fetcher,
     { suspense: true }
   );
-  console.log(data);
-  console.log(isValidating);
   return { data, error };
 };
