@@ -1,17 +1,18 @@
+/** ./src/components/hooks/useAllUsersSWR.ts */
 import useSWR from "swr";
 
 import { User } from "../types/User";
 
 export const useAllUsersSWR = () => {
   const fetcher = async (url: string): Promise<any> => {
-    const resonse = await fetch(url);
-    return resonse.json();
+    const response = await fetch(url);
+    return response.json();
   };
 
-  const { data, error, isValidating } = useSWR<Array<User>>(
+  const { data } = useSWR<Array<User>>(
     "https://jsonplaceholder.typicode.com/users",
     fetcher,
     { suspense: true }
   );
-  return { data, error };
+  return { data };
 };

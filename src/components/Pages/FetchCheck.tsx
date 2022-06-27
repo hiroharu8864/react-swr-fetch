@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useAllUsersSWR } from "../../hooks/useAllUsersSWR";
 
 const ResultComponent = () => {
-  const { data, error } = useAllUsersSWR();
+  const { data } = useAllUsersSWR();
 
   return (
     <>
@@ -26,7 +26,7 @@ export const FetchCheck: FC = memo(() => {
   return (
     <>
       <div>
-        <Suspense fallback={<p>厄介な広告ページの表示中</p>}>
+        <Suspense fallback={<p>厄介な広告ページの表示</p>}>
           <ResultComponent />
         </Suspense>
         <button onClick={onClickHome}>to home</button>
