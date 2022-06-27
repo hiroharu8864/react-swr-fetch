@@ -1,4 +1,3 @@
-/** ./src/components/hooks/useAllUsersSWR.ts */
 import useSWR from "swr";
 
 import { User } from "../types/User";
