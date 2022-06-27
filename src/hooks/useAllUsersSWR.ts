@@ -7,14 +7,11 @@ export const useAllUsersSWR = () => {
     const resonse = await fetch(url);
     return resonse.json();
   };
-  /**
-   * 第2引数　fetcher
-   * Promise を返す関数であれば、何でもよい。
-   */
 
   const { data, error, isValidating } = useSWR<Array<User>>(
     "https://jsonplaceholder.typicode.com/users",
-    fetcher
+    fetcher,
+    { suspense: true }
   );
   console.log(data);
   console.log(isValidating);
