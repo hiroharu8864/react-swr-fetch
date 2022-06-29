@@ -1,6 +1,8 @@
 import { FC, memo, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 
+import { PrimaryButton } from "../atoms/button/PrimaryButton";
+
 export const Home: FC = memo(() => {
   const navigate = useNavigate();
   const onClickFetchCheck = useCallback(() => {
@@ -9,7 +11,9 @@ export const Home: FC = memo(() => {
   return (
     <>
       <p>SWR FetchCheck</p>
-      <button onClick={onClickFetchCheck}>to react query check</button>
+      <PrimaryButton onClick={onClickFetchCheck}>
+        To React Query Check
+      </PrimaryButton>
     </>
   );
 });

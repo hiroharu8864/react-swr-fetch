@@ -2,6 +2,8 @@ import { FC, memo, Suspense, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAllUsersSWR } from "../../hooks/useAllUsersSWR";
 
+import { PrimaryButton } from "../atoms/button/PrimaryButton";
+
 const ResultComponent = () => {
   const { data } = useAllUsersSWR();
 
@@ -29,7 +31,7 @@ export const FetchCheck: FC = memo(() => {
         <Suspense fallback={<p>厄介な広告ページの表示</p>}>
           <ResultComponent />
         </Suspense>
-        <button onClick={onClickHome}>to home</button>
+        <PrimaryButton onClick={onClickHome}>to Home</PrimaryButton>
       </div>
     </>
   );
