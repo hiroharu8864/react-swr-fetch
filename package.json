@@ -10,6 +10,7 @@
   "main": "src/index.tsx",
   "dependencies": {
     "@types/react-router-dom": "5.3.3",
+    "amplify-app": "4.2.36",
     "react": "18.0.0",
     "react-dom": "18.0.0",
     "react-router-dom": "6.3.0",
