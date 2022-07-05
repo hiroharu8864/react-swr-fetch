@@ -8,11 +8,19 @@ export const Home: FC = memo(() => {
   const onClickFetchCheck = useCallback(() => {
     navigate("/fetch");
   }, [navigate]);
+  const onClickNodeFetchCheck = useCallback(() => {
+    navigate("/nodefetch");
+  }, [navigate]);
   return (
     <>
       <p>SWR FetchCheck</p>
       <PrimaryButton onClick={onClickFetchCheck}>
-        To React Query Check
+        To SWR Query Check
+      </PrimaryButton>
+      <br />
+      <br />
+      <PrimaryButton onClick={onClickNodeFetchCheck}>
+        To Node-Fetch Query Check
       </PrimaryButton>
     </>
   );
